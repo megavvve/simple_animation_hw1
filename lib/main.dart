@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:simple_animation_hw1/widgets/crystallBalanceWidget.dart';
 import 'package:simple_animation_hw1/widgets/firstWidget.dart';
 import 'package:simple_animation_hw1/widgets/levelAchivmentWidget.dart';
 import 'package:simple_animation_hw1/widgets/lunchWidget.dart';
 import 'package:simple_animation_hw1/widgets/profileWidget.dart';
+import 'package:simple_animation_hw1/widgets/sectionsWidget.dart';
+
+import 'widgets/chatCampWidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,8 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 227, 226, 226),
-      body: ListView(children: [
-        SizedBox(height: 80.h,),
+      body: Stack(children: const [
+        firstWidget(),
+        profileWidget(),
+        levelAchivmentWidget(),
+        
+        ChatCampWidget(),
+        CrystallBalanceWidget(),
+        SectionWidget(),
+        lunchWidget(),
+      ]),
+
+      /*body: ListView(children: [
+        SizedBox(height: 35.h,),
         Row(
           children: [
             SizedBox(width: 10.w,),
@@ -75,7 +90,23 @@ class _MyHomePageState extends State<MyHomePage> {
             const lunchWidget(),
           ],
         ),
-      ]),
+        SizedBox(height: 25.h,),
+        Row(children: [SizedBox(width: 30.w,),ChatCampWidget(),]),
+        SizedBox(height: 20,),
+        Row(
+        
+          children: [
+            SizedBox(width: 17.w,),
+            const CrystallBalanceWidget(),
+            SizedBox(width: 30.w,),
+            Column(
+              children: [
+                SectionWidget(),
+              ],
+            )
+          ],
+        )
+      ]),*/
     );
   }
 }
