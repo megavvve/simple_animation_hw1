@@ -41,72 +41,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 226, 226),
+      backgroundColor: const Color.fromARGB(255, 227, 226, 226),
       body: Stack(children: const [
-        firstWidget(),
-        profileWidget(),
-        levelAchivmentWidget(),
-        
+        FirstWidget(),
+        ProfileWidget(),
+        LevelAchivmentWidget(),
         ChatCampWidget(),
         CrystallBalanceWidget(),
         SectionWidget(),
-        lunchWidget(),
+        LunchWidget(),
       ]),
-
-      /*body: ListView(children: [
-        SizedBox(height: 35.h,),
-        Row(
-          children: [
-            SizedBox(width: 10.w,),
-            
-            firstWidget(),
-            SizedBox(width: 25.w,),
-            profileWidget(),
-          ],
-        ),
-        SizedBox(height: 50.h,),
-        Row(
-          children: [
-            SizedBox(width: 90.w,),
-            levelAchivmentWidget(),
-          ],
-          
-        ),
-        SizedBox(height: 30.h,),
-        Row(
-          children: [
-            SizedBox(width: 23.w,),
-            const lunchWidget(),
-          ],
-        ),
-        SizedBox(height: 25.h,),
-        Row(children: [SizedBox(width: 30.w,),ChatCampWidget(),]),
-        SizedBox(height: 20,),
-        Row(
-        
-          children: [
-            SizedBox(width: 17.w,),
-            const CrystallBalanceWidget(),
-            SizedBox(width: 30.w,),
-            Column(
-              children: [
-                SectionWidget(),
-              ],
-            )
-          ],
-        )
-      ]),*/
     );
   }
 }

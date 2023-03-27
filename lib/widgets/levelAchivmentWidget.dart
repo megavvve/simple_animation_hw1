@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:math' as math;
 
-class levelAchivmentWidget extends StatefulWidget {
-  const levelAchivmentWidget({super.key});
+class LevelAchivmentWidget extends StatefulWidget {
+  const LevelAchivmentWidget({super.key});
 
   @override
-  State<levelAchivmentWidget> createState() => _levelAchivmentWidgetState();
+  State<LevelAchivmentWidget> createState() => _LevelAchivmentWidgetState();
 }
 
-class _levelAchivmentWidgetState extends State<levelAchivmentWidget> {
-  int _level = 5;
+class _LevelAchivmentWidgetState extends State<LevelAchivmentWidget> {
+  final int _level = 5;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -18,9 +18,9 @@ class _levelAchivmentWidgetState extends State<levelAchivmentWidget> {
       left: 70.w,
       child: UnconstrainedBox(
         child: TweenAnimationBuilder(
-          curve: Curves.bounceInOut,
+            curve: Curves.bounceInOut,
             duration: const Duration(seconds: 4),
-            tween: Tween(begin:10.w,end: 190.w),
+            tween: Tween(begin: 10.w, end: 190.w),
             builder: (BuildContext context, dynamic value, Widget? child) {
               return Transform.rotate(
                 angle: math.pi / 16,
@@ -42,7 +42,7 @@ class _levelAchivmentWidgetState extends State<levelAchivmentWidget> {
                   child: Column(
                     children: [
                       Text(
-                        'Уровень достижений: ${_level}',
+                        'Уровень достижений: $_level',
                         style: TextStyle(
                             fontSize: 20.h, fontWeight: FontWeight.bold),
                       ),

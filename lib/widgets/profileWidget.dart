@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:math' as math;
 
-class profileWidget extends StatefulWidget {
-  const profileWidget({super.key});
+class ProfileWidget extends StatefulWidget {
+  const ProfileWidget({super.key});
 
   @override
-  State<profileWidget> createState() => _profileWidgetState();
+  State<ProfileWidget> createState() => _ProfileWidgetState();
 }
 
-class _profileWidgetState extends State<profileWidget> {
+class _ProfileWidgetState extends State<ProfileWidget> {
   var toogle = true;
   @override
   Widget build(BuildContext context) {

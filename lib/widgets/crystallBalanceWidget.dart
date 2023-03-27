@@ -37,9 +37,8 @@ class _CrystallBalanceWidgetState extends State<CrystallBalanceWidget> {
             child: Column(
               children: [
                 Text(
-                  'Баланс кристаллов: ${_countCrystalls} 💎',
-                  style: TextStyle(
-                      fontSize: 20.h, fontWeight: FontWeight.bold),
+                  'Баланс кристаллов: $_countCrystalls 💎',
+                  style: TextStyle(fontSize: 20.h, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 7.h,
@@ -51,10 +50,9 @@ class _CrystallBalanceWidgetState extends State<CrystallBalanceWidget> {
                     });
                   },
                   style: ButtonStyle(
-                    fixedSize:
-                        MaterialStateProperty.all(const Size(119, 43)),
-                    backgroundColor: MaterialStateProperty.all(
-                        Colors.lightBlue.shade100),
+                    fixedSize: MaterialStateProperty.all(const Size(119, 43)),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.lightBlue.shade100),
                   ),
                   child: Text('Потратить',
                       style: TextStyle(

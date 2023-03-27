@@ -34,7 +34,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                 ),
               ],
             ),
-            child: Align(
+            child: const Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Секции',

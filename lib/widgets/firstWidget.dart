@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:math' as math;
 
-class firstWidget extends StatefulWidget {
-  const firstWidget({super.key});
+class FirstWidget extends StatefulWidget {
+  const FirstWidget({super.key});
 
   @override
-  State<firstWidget> createState() => _firstWidgetState();
+  State<FirstWidget> createState() => _FirstWidgetState();
 }
 
-class _firstWidgetState extends State<firstWidget> {
+class _FirstWidgetState extends State<FirstWidget> {
   var toogle = true;
   var _money = 1500;
   var _stateMoney = "Потратить";
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: MediaQuery.of(context).size.height/10, 
+      top: MediaQuery.of(context).size.height / 10,
       left: -100.w,
       right: 0,
       child: UnconstrainedBox(
         child: TweenAnimationBuilder(
-            duration: Duration(seconds: 4),
+            duration: const Duration(seconds: 4),
             curve: Curves.linear,
             tween: toogle
                 ? Tween(begin: -12.0, end: 12.0)
@@ -30,7 +30,8 @@ class _firstWidgetState extends State<firstWidget> {
               return Transform.rotate(
                 angle: -math.pi.toDouble() / value,
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 13.h, horizontal: 12.w),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 13.h, horizontal: 12.w),
                   width: 254.w,
                   height: 122.h,
                   decoration: BoxDecoration(
@@ -47,9 +48,9 @@ class _firstWidgetState extends State<firstWidget> {
                   child: Column(
                     children: [
                       Text(
-                        'Баланс монет: ${_money} 💸',
-                        style:
-                            TextStyle(fontSize: 19.h, fontWeight: FontWeight.bold),
+                        'Баланс монет: $_money 💸',
+                        style: TextStyle(
+                            fontSize: 19.h, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15.h,
@@ -71,12 +72,14 @@ class _firstWidgetState extends State<firstWidget> {
                           });
                         },
                         style: ButtonStyle(
-                          fixedSize: MaterialStateProperty.all(const Size(186, 43)),
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.lightBlue.shade100),
+                          fixedSize:
+                              MaterialStateProperty.all(const Size(186, 43)),
+                          backgroundColor: MaterialStateProperty.all(
+                              Colors.lightBlue.shade100),
                         ),
                         child: Text(_stateMoney,
-                            style: TextStyle(color: Colors.blue, fontSize: 15.h)),
+                            style:
+                                TextStyle(color: Colors.blue, fontSize: 15.h)),
                       )
                     ],
                   ),
