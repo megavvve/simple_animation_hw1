@@ -9,7 +9,7 @@ class LunchWidget extends StatefulWidget {
   State<LunchWidget> createState() => _LunchWidgetState();
 }
 
-class _unchWidgetState extends State<LunchWidget> {
+class _LunchWidgetState extends State<LunchWidget> {
   bool _isExpanded = false;
   @override
   Widget build(BuildContext context) {
